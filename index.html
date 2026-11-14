@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Una reproducción interactiva del folleto Versículos que transforman."
+    />
+    <meta name="theme-color" content="#f6eee7" />
+    <title>Versículos que transforman — Tríptico</title>
+    <link rel="preload" as="image" href="assets/folleto-exterior.png" />
+    <link rel="preload" as="image" href="assets/folleto-interior.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="viewer" aria-label="Tríptico virtual">
+      <div class="paper-stage" id="paper-stage">
+        <div class="paper-shadow" aria-hidden="true"></div>
+        <div class="paper-stack" aria-hidden="true"></div>
+        <button
+          class="brochure"
+          id="brochure"
+          type="button"
+          aria-label="Mostrar el interior del tríptico"
+          aria-describedby="side-announcement"
+        >
+          <span class="brochure-face face-outside" aria-hidden="false">
+            <img
+              src="assets/folleto-exterior.png"
+              alt="Exterior del folleto: versículos a la izquierda, contacto de la iglesia al centro y la portada Dios te ama a la derecha."
+              fetchpriority="high"
+              draggable="false"
+            />
+          </span>
+          <span class="brochure-face face-inside" aria-hidden="true" inert>
+            <img
+              src="assets/folleto-interior.png"
+              alt="Interior del folleto: seis paneles numerados con el mensaje de salvación."
+              fetchpriority="high"
+              draggable="false"
+            />
+          </span>
+        </button>
+      </div>
+
+      <nav class="side-controls" aria-label="Lados del tríptico">
+        <button class="side-button is-active" type="button" data-side="outside" aria-pressed="true">
+          <span class="control-index">01</span> Exterior
+        </button>
+        <span class="control-divider" aria-hidden="true"></span>
+        <button class="side-button" type="button" data-side="inside" aria-pressed="false">
+          <span class="control-index">02</span> Interior
+        </button>
+      </nav>
+
+      <span class="sr-only" aria-live="polite" id="side-announcement">
+        Exterior del tríptico
+      </span>
+    </main>
+  </body>
+</html>
