@@ -15,49 +15,116 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <main class="viewer" aria-label="Tríptico virtual">
-      <div class="paper-stage" id="paper-stage">
-        <div class="paper-shadow" aria-hidden="true"></div>
-        <div class="paper-stack" aria-hidden="true"></div>
-        <button
-          class="brochure"
-          id="brochure"
-          type="button"
-          aria-label="Mostrar el interior del tríptico"
-          aria-describedby="side-announcement"
-        >
-          <span class="brochure-face face-outside" aria-hidden="false">
-            <img
-              src="assets/folleto-exterior.png"
-              alt="Exterior del folleto: versículos a la izquierda, contacto de la iglesia al centro y la portada Dios te ama a la derecha."
-              fetchpriority="high"
-              draggable="false"
-            />
-          </span>
-          <span class="brochure-face face-inside" aria-hidden="true" inert>
-            <img
-              src="assets/folleto-interior.png"
-              alt="Interior del folleto: seis paneles numerados con el mensaje de salvación."
-              fetchpriority="high"
-              draggable="false"
-            />
-          </span>
-        </button>
-      </div>
+    <main class="page-shell">
+      <section class="viewer" aria-label="Tríptico virtual">
+        <div class="paper-stage" id="paper-stage">
+          <div class="paper-shadow" aria-hidden="true"></div>
+          <div class="paper-stack" aria-hidden="true"></div>
+          <button
+            class="brochure"
+            id="brochure"
+            type="button"
+            aria-label="Mostrar el interior del tríptico"
+            aria-describedby="side-announcement"
+          >
+            <span class="brochure-face face-outside" aria-hidden="false">
+              <img
+                src="assets/folleto-exterior.png"
+                alt="Exterior del folleto: versículos a la izquierda, contacto de la iglesia al centro y la portada Dios te ama a la derecha."
+                fetchpriority="high"
+                draggable="false"
+              />
+            </span>
+            <span class="brochure-face face-inside" aria-hidden="true" inert>
+              <img
+                src="assets/folleto-interior.png"
+                alt="Interior del folleto: seis paneles numerados con el mensaje de salvación."
+                fetchpriority="high"
+                draggable="false"
+              />
+            </span>
+          </button>
+        </div>
 
-      <nav class="side-controls" aria-label="Lados del tríptico">
-        <button class="side-button is-active" type="button" data-side="outside" aria-pressed="true">
-          <span class="control-index">01</span> Exterior
-        </button>
-        <span class="control-divider" aria-hidden="true"></span>
-        <button class="side-button" type="button" data-side="inside" aria-pressed="false">
-          <span class="control-index">02</span> Interior
-        </button>
-      </nav>
+        <nav class="side-controls" aria-label="Lados del tríptico">
+          <button class="side-button is-active" type="button" data-side="outside" aria-pressed="true">
+            <span class="control-index">01</span> Exterior
+          </button>
+          <span class="control-divider" aria-hidden="true"></span>
+          <button class="side-button" type="button" data-side="inside" aria-pressed="false">
+            <span class="control-index">02</span> Interior
+          </button>
+        </nav>
 
-      <span class="sr-only" aria-live="polite" id="side-announcement">
-        Exterior del tríptico
-      </span>
+        <span class="sr-only" aria-live="polite" id="side-announcement">
+          Exterior del tríptico
+        </span>
+      </section>
+
+      <section class="content" aria-label="Información de la iglesia">
+        <div class="intro-block">
+          <p class="eyebrow">Bienvenidos a nuestra iglesia</p>
+          <h1>Versículos que transforman</h1>
+          <p class="lead">
+            Somos una comunidad que cree que la gracia de Dios cambia vidas, fortalece familias y llena de esperanza cada nueva mañana.
+          </p>
+        </div>
+
+        <div class="info-grid">
+          <article class="info-card feature-card">
+            <p class="eyebrow">Nuestra misión</p>
+            <h2>Compartir la buena noticia de Jesús con amor, verdad y servicio.</h2>
+            <p>
+              Acompañamos a personas de todas las edades a conocer a Cristo, crecer en su fe y vivir con propósito, paz y transformación real.
+            </p>
+          </article>
+
+          <article class="info-card contact-card">
+            <p class="eyebrow">Contacto</p>
+            <ul class="contact-list">
+              <li><span class="label">Dirección:</span> Calle 12 # 45-67, Barrio El Mirador, Cartagena</li>
+              <li><span class="label">Pastor:</span> Pastor Daniel Guerrero</li>
+              <li><span class="label">Teléfono:</span> +57 300 123 4567</li>
+              <li><span class="label">Correo:</span> contacto@iglesiaesperanza.org</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="schedule-panel">
+          <div class="schedule-header">
+            <p class="eyebrow">Horarios</p>
+            <h2>Ven y comparte con nosotros</h2>
+          </div>
+
+          <div class="schedule-grid">
+            <article class="time-block">
+              <h3>Domingos</h3>
+              <p>9:00 a.m. — Culto de adoración</p>
+              <p>11:00 a.m. — Servicio principal</p>
+            </article>
+
+            <article class="time-block">
+              <h3>Miércoles</h3>
+              <p>7:00 p.m. — Enseñanza y oración</p>
+            </article>
+
+            <article class="time-block">
+              <h3>Jóvenes y niños</h3>
+              <p>Actividades especiales cada sábado</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="cta-panel">
+          <div>
+            <p class="eyebrow">Te esperamos</p>
+            <h2>No importa en qué etapa estés, aquí encontrarás un lugar de bienvenida.</h2>
+          </div>
+          <a class="cta-button" href="https://maps.google.com/?q=Calle+12+%23+45-67+Cartagena" target="_blank" rel="noreferrer">
+            Cómo llegar
+          </a>
+        </div>
+      </section>
     </main>
   </body>
 </html>

@@ -6,7 +6,55 @@ const sideButtons = document.querySelectorAll(".side-button");
 const announcement = document.querySelector("#side-announcement");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
+const imageCandidates = {
+  outside: [
+    "assets/folleto-exterior.png",
+    "assets/folleto-exterior.webp",
+    "assets/exterior.png",
+    "assets/folio-exterior.png",
+  ],
+  inside: [
+    "assets/folleto-interior.png",
+    "assets/folleto-interior.webp",
+    "assets/interior.png",
+    "assets/folio-interior.png",
+  ],
+};
+
 let changeTimeout;
+
+function loadImageWithFallback(img, candidates) {
+  let index = 0;
+
+  function tryNextCandidate() {
+    if (index >= candidates.length) return;
+
+    const nextSource = candidates[index];
+    img.onerror = () => {
+      index += 1;
+      img.onerror = null;
+      img.onload = null;
+      tryNextCandidate();
+    };
+    img.onload = () => {
+      img.onerror = null;
+      img.onload = null;
+    };
+    img.src = nextSource;
+  }
+
+  tryNextCandidate();
+}
+
+function initializeImages() {
+  const outsideImage = document.querySelector(".face-outside img");
+  const insideImage = document.querySelector(".face-inside img");
+
+  if (outsideImage) loadImageWithFallback(outsideImage, imageCandidates.outside);
+  if (insideImage) loadImageWithFallback(insideImage, imageCandidates.inside);
+}
+
+initializeImages();
 
 function setSide(side) {
   const isInside = side === "inside";
