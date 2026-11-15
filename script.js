@@ -8,16 +8,16 @@ const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 const imageCandidates = {
   outside: [
-    "assets/folleto-exterior.png",
-    "assets/folleto-exterior.webp",
-    "assets/exterior.png",
-    "assets/folio-exterior.png",
+    "assets/folleto-exterior.png?v=9a292846",
+    "assets/folleto-exterior.webp?v=9a292846",
+    "assets/exterior.png?v=9a292846",
+    "assets/folio-exterior.png?v=9a292846",
   ],
   inside: [
-    "assets/folleto-interior.png",
-    "assets/folleto-interior.webp",
-    "assets/interior.png",
-    "assets/folio-interior.png",
+    "assets/folleto-interior.png?v=1b3879c8",
+    "assets/folleto-interior.webp?v=1b3879c8",
+    "assets/interior.png?v=1b3879c8",
+    "assets/folio-interior.png?v=1b3879c8",
   ],
 };
 
