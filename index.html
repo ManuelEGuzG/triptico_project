@@ -5,18 +5,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Una reproducción interactiva del folleto Versículos que transforman."
+      content="Conoce una comunidad de fe, esperanza y servicio. Encuentra nuestros horarios, información de contacto y el tríptico interactivo."
     />
-    <meta name="theme-color" content="#f6eee7" />
-    <title>Versículos que transforman — Tríptico</title>
-    <link rel="preload" as="image" href="assets/folleto-exterior.png" />
-    <link rel="preload" as="image" href="assets/folleto-interior.png" />
+    <meta name="theme-color" content="#f8f0e9" />
+    <title>Iglesia Movimiento Pentecostal Misionero Internacional de Martina Bustos</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
     <main class="page-shell">
-      <section class="viewer" aria-label="Tríptico virtual">
+      <section class="content" aria-label="Información de la iglesia">
+        <header class="intro-block">
+          <p class="eyebrow">Iglesia Movimiento Pentecostal Misionero Internacional de Martina Bustos</p>
+          <h1>Un lugar para encontrar<br />esperanza y propósito.</h1>
+          <p class="lead">
+            Una comunidad de fe en Martina Bustos, Liberia. Te invitamos a conocer el amor de Dios y compartir con nosotros.
+          </p>
+          <a class="cta-button hero-button" href="#horarios">Conoce nuestros horarios</a>
+        </header>
+
+        <div class="info-grid" id="iglesia">
+          <article class="info-card feature-card">
+            <p class="eyebrow">Nuestra misión</p>
+            <h2>Compartir la buena noticia de Jesús con amor, verdad y servicio.</h2>
+            <p>
+              Acompañamos a personas de todas las edades a conocer a Cristo, crecer en su fe y vivir con propósito, paz y transformación real.
+            </p>
+          </article>
+
+          <article class="info-card contact-card" id="visitanos">
+            <p class="eyebrow">Contacto</p>
+            <h2>Estamos para ti</h2>
+            <ul class="contact-list">
+              <li><span class="label">Dirección:</span> MH5G+6HC, Av. 37, Martina Bustos, Liberia, Guanacaste, Costa Rica</li>
+              <li><span class="label">Pastor:</span> Mario</li>
+              <li><span class="label">Teléfono:</span> <a href="tel:+50672716649">+506 7271 6649</a></li>
+            </ul>
+          </article>
+        </div>
+
+        <section class="schedule-panel" id="horarios" aria-labelledby="schedule-title">
+          <div class="schedule-header">
+            <div>
+              <p class="eyebrow">Encuéntranos</p>
+              <h2 id="schedule-title">Hay un lugar para ti</h2>
+            </div>
+            <p class="schedule-intro">Horarios de cultos durante toda la semana. ¡Te esperamos!</p>
+          </div>
+
+          <div class="schedule-grid">
+            <article class="time-block">
+              <h3>Lunes</h3>
+              <p>Actividad de jóvenes <span class="schedule-note">(a veces no hay)</span></p>
+              <p class="service-time">7:00 p.m. – 9:00 p.m.</p>
+            </article>
+            <article class="time-block">
+              <h3>Martes</h3>
+              <p>Culto de damas</p>
+              <p class="service-time">7:00 p.m. – 9:00 p.m.</p>
+            </article>
+            <article class="time-block">
+              <h3>Miércoles</h3>
+              <p>Culto de barrio</p>
+              <p class="service-time">7:00 p.m. – 9:00 p.m.</p>
+            </article>
+            <article class="time-block">
+              <h3>Jueves</h3>
+              <p>Culto de enseñanza</p>
+              <p class="service-time">7:00 p.m. – 9:00 p.m.</p>
+            </article>
+            <article class="time-block">
+              <h3>Viernes</h3>
+              <p>Culto de caballeros</p>
+              <p class="service-time">7:00 p.m. – 9:00 p.m.</p>
+            </article>
+            <article class="time-block">
+              <h3>Sábado</h3>
+              <p>Culto de jóvenes</p>
+              <p class="service-time">7:00 p.m. – 9:00 p.m.</p>
+            </article>
+            <article class="time-block">
+              <h3>Domingo</h3>
+              <p>Culto general</p>
+              <p class="service-time">6:00 p.m. – 8:30 p.m.</p>
+            </article>
+          </div>
+
+          <div class="special-programs">
+            <h3>Programas especiales</h3>
+            <div class="special-grid">
+              <article class="special-block">
+                <h4>Escuela dominical</h4>
+                <p>10:00 a.m. – 1:00 p.m.</p>
+              </article>
+              <article class="special-block">
+                <h4>Intercesión</h4>
+                <p>1:00 p.m. – 3:00 p.m.</p>
+              </article>
+              <article class="special-block">
+                <h4>Matutino</h4>
+                <p>3:00 a.m. – 5:00 a.m.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <div class="cta-panel">
+          <div>
+            <p class="eyebrow">Te esperamos</p>
+            <h2>Tu historia también puede ser transformada.</h2>
+            <p>Ven como eres. Hay una comunidad lista para caminar contigo.</p>
+          </div>
+          <a class="cta-button" href="https://www.google.com/maps/search/?api=1&amp;query=MH5G%2B6HC%2C%20Av.%2037%2C%20Martina%20Bustos%2C%20Liberia%2C%20Guanacaste%2C%20Costa%20Rica" target="_blank" rel="noreferrer">
+            Cómo llegar
+          </a>
+        </div>
+      </section>
+
+      <section class="viewer" aria-labelledby="brochure-title">
+        <div class="brochure-heading">
+          <p class="eyebrow">Explora el mensaje</p>
+          <h2 id="brochure-title">Nuestro tríptico</h2>
+          <p>Descubre el folleto y cambia entre su exterior e interior.</p>
+        </div>
         <div class="paper-stage" id="paper-stage">
           <div class="paper-shadow" aria-hidden="true"></div>
           <div class="paper-stack" aria-hidden="true"></div>
@@ -31,7 +142,7 @@
               <img
                 src="assets/folleto-exterior.png"
                 alt="Exterior del folleto: versículos a la izquierda, contacto de la iglesia al centro y la portada Dios te ama a la derecha."
-                fetchpriority="high"
+                loading="lazy"
                 draggable="false"
               />
             </span>
@@ -39,7 +150,7 @@
               <img
                 src="assets/folleto-interior.png"
                 alt="Interior del folleto: seis paneles numerados con el mensaje de salvación."
-                fetchpriority="high"
+                loading="lazy"
                 draggable="false"
               />
             </span>
@@ -59,71 +170,6 @@
         <span class="sr-only" aria-live="polite" id="side-announcement">
           Exterior del tríptico
         </span>
-      </section>
-
-      <section class="content" aria-label="Información de la iglesia">
-        <div class="intro-block">
-          <p class="eyebrow">Bienvenidos a nuestra iglesia</p>
-          <h1>Versículos que transforman</h1>
-          <p class="lead">
-            Somos una comunidad que cree que la gracia de Dios cambia vidas, fortalece familias y llena de esperanza cada nueva mañana.
-          </p>
-        </div>
-
-        <div class="info-grid">
-          <article class="info-card feature-card">
-            <p class="eyebrow">Nuestra misión</p>
-            <h2>Compartir la buena noticia de Jesús con amor, verdad y servicio.</h2>
-            <p>
-              Acompañamos a personas de todas las edades a conocer a Cristo, crecer en su fe y vivir con propósito, paz y transformación real.
-            </p>
-          </article>
-
-          <article class="info-card contact-card">
-            <p class="eyebrow">Contacto</p>
-            <ul class="contact-list">
-              <li><span class="label">Dirección:</span> Calle 12 # 45-67, Barrio El Mirador, Cartagena</li>
-              <li><span class="label">Pastor:</span> Pastor Daniel Guerrero</li>
-              <li><span class="label">Teléfono:</span> +57 300 123 4567</li>
-              <li><span class="label">Correo:</span> contacto@iglesiaesperanza.org</li>
-            </ul>
-          </article>
-        </div>
-
-        <div class="schedule-panel">
-          <div class="schedule-header">
-            <p class="eyebrow">Horarios</p>
-            <h2>Ven y comparte con nosotros</h2>
-          </div>
-
-          <div class="schedule-grid">
-            <article class="time-block">
-              <h3>Domingos</h3>
-              <p>9:00 a.m. — Culto de adoración</p>
-              <p>11:00 a.m. — Servicio principal</p>
-            </article>
-
-            <article class="time-block">
-              <h3>Miércoles</h3>
-              <p>7:00 p.m. — Enseñanza y oración</p>
-            </article>
-
-            <article class="time-block">
-              <h3>Jóvenes y niños</h3>
-              <p>Actividades especiales cada sábado</p>
-            </article>
-          </div>
-        </div>
-
-        <div class="cta-panel">
-          <div>
-            <p class="eyebrow">Te esperamos</p>
-            <h2>No importa en qué etapa estés, aquí encontrarás un lugar de bienvenida.</h2>
-          </div>
-          <a class="cta-button" href="https://maps.google.com/?q=Calle+12+%23+45-67+Cartagena" target="_blank" rel="noreferrer">
-            Cómo llegar
-          </a>
-        </div>
       </section>
     </main>
   </body>
